@@ -19,3 +19,18 @@ var config = {
   }).catch(function (error) {
     console.log("Got an error", error);
   });
+
+  const docRef2 = firestore.doc("incidents/records";)
+
+  const incident1 = textIn.value;
+  const incident2 = textAdd.value;
+  const incident3 = file.value;
+  docRef.set({
+      in: incident1
+      add: incident2
+      file: incident3
+  }).then(function() {
+      console.log("Status saved!");
+  }).catch(function (error) {
+    console.log("Got an error", error);
+  });
