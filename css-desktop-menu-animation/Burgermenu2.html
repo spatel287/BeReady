@@ -1,34 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" >
-    <head>
-        <style>
-        body {
-          background-image: url(pics/rain.jpg);
-          height: auto;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: absulute;
-        }
-        
-        h1 {
-          color: black;
-          text-align: center;
-        }
-        
-        p {
-          font-family: verdana;
-          font-size: 20px;
-        }
-        </style>
-        </head>
-        <body>
-        
-        <h1><font size="110">BeReady</font></h1>
-        
-        
-        </body>
+   
         
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <meta charset="UTF-8">
   <title>CSS Desktop Menu Animation</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -39,11 +14,51 @@
   
       <link rel="stylesheet" href="css/style.css">
 
-  
+  <style>
+    body {
+  background-image: url(https://media.istockphoto.com/photos/rain-water-drop-falling-to-the-floor-in-rainy-season-picture-id522795232?k=6&m=522795232&s=612x612&w=0&h=iXr_3pGp0Q9-rCoiZYaxbPOushgiC3IwmH3VOhN2ui4=);
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: absulute;
+}
+    h1{
+      font-size: 500%;
+      font-weight: bold;
+      color: white
+    }
+    span{
+      color: white
+    }
+  </style>
 </head>
 
 
 <body>
+  <span>
+  <h1 align="center"> BeReady</h1>
+
+    <div  align="right"> <span id="city"></span><span>,</span>
+        
+      <span id="state"></span>
+      </div>
+      <script>
+          
+          $.ajax({
+              url: "https://geoip-db.com/jsonp",
+              jsonpCallback: "callback",
+              dataType: "jsonp",
+              success: function( location ) {
+                //  $('#country').html(location.country_name);
+                 $('#state').html(location.state);
+                  $('#city').html(location.city);
+                 
+                 
+              }
+          }); 
+            
+      </script>
+      </span>
   
 
 <div class="menu-trigger">
@@ -68,6 +83,8 @@
       </li>
     </ul>
   </div>
+
+  
 
   
   
