@@ -9,7 +9,7 @@
 <link rel='stylesheet' href='http://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css'>
 <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-<script src="firebaseApp.js"></script>
+<script src="../firebaseApp.js"></script>
       <link rel="stylesheet" href="css1/style1.css">
 
 
@@ -45,7 +45,7 @@
   <label for="input1">Incident</label>
 </div>
   <div class="text-input">
-  <input type="text" id="input1" placeholder="  Type Incident!">
+  <input type="text" id="input2" placeholder="  Type Incident!">
   <label for="input1">Address</label>
 </div>
 
@@ -57,7 +57,7 @@
     <div class="js--image-preview"></div>
     <div class="upload-options">
       <label>
-        <input type="file" class="image-upload" accept="image/*" />
+        <input type="file" class="image-upload" id="file" accept="image/*" />
       </label>
     </div>
   </div>
@@ -68,7 +68,7 @@
 
   
 </div>
-<center><button type="button" class="btn btn-success" onclick="login()">submit</button></center>
+<center><button type="button" class="btn btn-success" id="saveButton">submit</button></center>
   
 
     <script src="js/index.js"></script>

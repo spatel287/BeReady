@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" >
-<<<<<<< HEAD
-   
-
     <head>
         <style>
         body {
@@ -25,12 +22,39 @@
         </style>
         </head>
         <body>
+
+           <span>
+
+
+    <div  align="right"> <span id="city"></span><span>,</span>
+        
+      <span id="state"></span>
+      </div>
+      <script>
+          
+          $.ajax({
+              url: "https://geoip-db.com/jsonp",
+              jsonpCallback: "callback",
+              dataType: "jsonp",
+              success: function( location ) {
+                //  $('#country').html(location.country_name);
+                 $('#state').html(location.state);
+                  $('#city').html(location.city);
+                 
+                 
+              }
+          }); 
+            
+      </script>
+      </span>
         
         <h1><font size="110">BeReady</font></h1>
+
+        
         
         
         </body>
->>>>>>> 69b236a5aea9a74549e8d0d4d3bc3a3965863bbe
+
         
 <!-- weather widget start --><div id="m-booked-weather-bl250-33403"> <div class="booked-wzs-250-175 weather-customize" style="background-color:#137AE9;width:550px;" id="width3"> <div class="booked-wzs-250-175_in"> 
   <div class="booked-wzs-250-175-data"> 
@@ -134,7 +158,7 @@
 
 <body>
   <span>
-  <h1 align="center"> BeReady</h1>
+
 
     <div  align="right"> <span id="city"></span><span>,</span>
         
@@ -165,19 +189,13 @@
   <div class="menu">
     <ul>
       <li> 
-        <p>Location</p>
+        <p><a href="../gmap.html">Nearby</a></p>
       </li>
       <li>
-        <p>Incidents</p>
+        <p><a href="../incidients/index1.html">Incidients</a></p>
       </li>
       <li>
         <p>Resources</p>
-      </li>
-      <li>
-        <p>Events</p>
-      </li>
-      <li> 
-        <p>Sports</p>
       </li>
     </ul>
   </div>
