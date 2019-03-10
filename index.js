@@ -1,0 +1,3 @@
+/*
+A demo of how the weather widgets generated at WeatherWidget.io automatically respond to fill their container.
+*/
